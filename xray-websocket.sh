@@ -15,7 +15,7 @@ apt install ufw
 
 #firewall rules
 ufw allow 'OpenSSH'
-ufw allow 443/tcp
+ufw allow 444/tcp
 ufw allow 80/tcp
 ufw enable
 
@@ -45,7 +45,7 @@ cat << EOF > /usr/local/etc/xray/config.json
   },
   "inbounds": [
     {
-      "port": 443,
+      "port": 80,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -69,7 +69,7 @@ cat << EOF > /usr/local/etc/xray/config.json
       }
     },
     {
-      "port": 80,
+      "port": 444,
       "protocol": "vless",
       "settings": {
         "clients": [
